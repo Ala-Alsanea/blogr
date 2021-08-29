@@ -26,106 +26,133 @@
         footer {
             border-top-right-radius: 100px;
         }
+        
+        #signIn {
+            background: linear-gradient(270deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));
+        }
+        
+        @media(min-width:1024px) {
+            #signIn {
+                background: white;
+            }
+            #signIn:hover {
+                background: rgba(255, 255, 255, 0.315);
+                color: white;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 
-    <header class="  overflow-hidden  " style="height: 35rem ;">
+    <header class="   " style="height: 35rem ;">
 
 
-        <nav class=" relative z-20   flex justify-between items-center  mx-4 py-12 ">
-            <a href="#" class=" w-20 ">
+        <nav class=" relative z-20   flex justify-between items-center  mx-4 py-12 lg:pt-6 ">
+
+            <a href="#" class=" w-20 lg:w-28 lg:ml-20  ">
                 <img src="images/logo.svg" alt="">
             </a>
 
-            <a id="three_lines" class="">
+            <a id="three_lines" class=" lg:hidden">
                 <img id="btn_icon" src="images/icon-hamburger.svg" alt="">
             </a>
 
-            <!-- real nav -->
-            <div id="mobile_nav" class="   absolute  hidden flex-col items-center py-5 px-3 top-32 right-0 w-full  ">
 
 
-                <section class="  overflow-hidden bg-white rounded-lg  relative flex flex-col items-center w-full  ">
+            <!-- real nav  -->
+            <div id="mobile_nav" class="   absolute  hidden flex-col items-center py-5 px-3 top-32 right-0 w-full lg:relative lg:top-0 lg:flex-row lg:block ">
 
-                    <!--##### btn 1 ####-->
-                    <h1 class="nav_btn w-full p-5 text-xl font-semibold flex items-center justify-center" onclick="nav_btn_clicked(nav_btn[0], nav_list[0],nav_img[0])">
-                        Product
-                        <img class="nav_img h-2 ml-2" src="images/icon-arrow-dark.svg" alt="">
-                    </h1>
 
-                    <!-- btn list  -->
-                    <ul class="nav_list  my-3  w-72 hidden bg-gray-200 text-center text-base text-gray-600 font-semibold rounded-lg  flex-col items-center   ">
-                        <a class="  w-full py-3  " href="/">
-                            <li>Overview </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Pricing </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Marketplace </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Features </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Integrations</li>
-                        </a>
-                    </ul>
-                    <!-- ####################################################### -->
+                <section class="  overflow-hidden bg-white rounded-lg  relative flex flex-col items-center w-full lg:flex-row lg:justify-between  lg:bg-opacity-0">
 
-                    <!--##### btn 2 ####-->
-                    <h1 class="nav_btn w-full p-5 text-xl font-semibold flex items-center justify-center" onclick="nav_btn_clicked(nav_btn[1], nav_list[1],nav_img[1])">
-                        Company
-                        <img class="nav_img h-2 ml-2" src="images/icon-arrow-dark.svg" alt="">
-                    </h1>
+                    <article class="lg:flex lg:space-x-5 lg:ml-11">
+                        <!--##### btn 1 ####-->
+                        <h1 class="nav_btn w-full p-5 text-xl font-semibold cursor-pointer flex items-center justify-center 
+                            lg:p-1  lg:text-sm lg:w-auto lg:text-white  " onclick="nav_btn_clicked(nav_btn[0], nav_list[0],nav_img[0])">
+                            Product
+                            <img class="nav_img h-2 ml-2 lg:hidden" src="images/icon-arrow-dark.svg" alt="">
+                            <img class="nav_img hidden h-2 ml-2 lg:inline" src="images/icon-arrow-light.svg" alt="">
 
-                    <!-- btn list  -->
-                    <ul class="nav_list  my-3  w-72 hidden bg-gray-200 text-center text-base text-gray-600 font-semibold rounded-lg  flex-col items-center   ">
-                        <a class="  w-full py-3  " href="/">
-                            <li>About </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Team </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Blog </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Careers</li>
-                        </a>
+                        </h1>
+                        <!-- btn list  -->
+                        <ul class="nav_list  my-3  w-72 hidden bg-gray-200 text-center text-base text-gray-600 font-semibold rounded-lg  flex-col items-center   ">
+                            <a class="  w-full py-3  " href="/">
+                                <li>Overview </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Pricing </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Marketplace </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Features </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Integrations</li>
+                            </a>
+                        </ul>
+                        <!-- ####################################################### -->
 
-                    </ul>
-                    <!-- ####################################################### -->
 
-                    <!--##### btn 3 ####-->
-                    <h1 class="nav_btn w-full p-5 text-xl font-semibold flex items-center justify-center" onclick="nav_btn_clicked(nav_btn[2], nav_list[2],nav_img[2])">
-                        Connect
-                        <img class="nav_img h-2 ml-2" src="images/icon-arrow-dark.svg" alt="">
-                    </h1>
+                        <!--##### btn 2 ####-->
+                        <h1 class="nav_btn w-full p-5 text-xl font-semibold cursor-pointer flex items-center justify-center 
+                            lg:p-1  lg:text-sm lg:w-auto lg:text-white  " onclick="nav_btn_clicked(nav_btn[1], nav_list[1],nav_img[1])">
+                            Company
+                            <img class="nav_img h-2 ml-2 lg:hidden" src="images/icon-arrow-dark.svg" alt="">
+                            <img class="nav_img hidden h-2 ml-2 lg:inline" src="images/icon-arrow-light.svg" alt="">
 
-                    <!-- btn list  -->
-                    <ul class="nav_list  my-3  w-72 hidden bg-gray-200 text-center text-base text-gray-600 font-semibold rounded-lg  flex-col items-center   ">
-                        <a class="  w-full py-3  " href="/">
-                            <li>Contact </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>Newsletter </li>
-                        </a>
-                        <a class="  w-full py-3  " href="/">
-                            <li>LinkedIn </li>
-                        </a>
-                    </ul>
-                    <!-- ####################################################### -->
+                        </h1>
 
-                    <hr class=" border-px border-gray-400 w-56 mx-4">
+                        <!-- btn list  -->
+                        <ul class="nav_list  my-3  w-72 hidden bg-gray-200 text-center text-base text-gray-600 font-semibold rounded-lg  flex-col items-center   ">
+                            <a class="  w-full py-3  " href="/">
+                                <li>About </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Team </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Blog </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Careers</li>
+                            </a>
+
+                        </ul>
+                        <!-- ####################################################### -->
+
+                        <!--##### btn 3 ####-->
+                        <h1 class="nav_btn w-full p-5 text-xl font-semibold cursor-pointer flex items-center justify-center 
+                            lg:p-1  lg:text-sm lg:w-auto lg:text-white  " onclick="nav_btn_clicked(nav_btn[2], nav_list[2],nav_img[2])">
+                            Connect
+                            <img class="nav_img h-2 ml-2 lg:hidden" src="images/icon-arrow-dark.svg" alt="">
+                            <img class="nav_img hidden h-2 ml-2 lg:inline" src="images/icon-arrow-light.svg" alt="">
+
+                        </h1>
+
+                        <!-- btn list  -->
+                        <ul class="nav_list  my-3  w-72 hidden bg-gray-200 text-center text-base text-gray-600 font-semibold rounded-lg  flex-col items-center   ">
+                            <a class="  w-full py-3  " href="/">
+                                <li>Contact </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>Newsletter </li>
+                            </a>
+                            <a class="  w-full py-3  " href="/">
+                                <li>LinkedIn </li>
+                            </a>
+                        </ul>
+                        <!-- ####################################################### -->
+                    </article>
+                    <hr class=" border-px border-gray-400 w-56 mx-4 lg:hidden">
 
                     <!-- login && sign in -->
-                    <div class="flex flex-col justify-center py-3">
-                        <a class=" text-center py-2 px-10 text-lg font-bold rounded-full  " href="/">Login</a>
-                        <a class=" text-center py-2 px-10 text-lg font-bold rounded-full text-white  " style="background: linear-gradient(270deg, hsl(353, 100%, 62%), hsl(13, 100%, 72%));" href="/">Sign in</a>
+                    <div class="flex flex-col justify-center py-3 lg:flex-row">
+                        <a class=" text-center py-2 px-10 text-lg font-bold rounded-full  lg:text-base lg:px-7 lg:font- lg:text-white " href="/">Login</a>
+                        <a id="signIn" class=" text-center py-2 px-10 text-lg font-bold rounded-full text-white lg:text-base lg:px-7 lg:font-bold lg:bg-white lg:text-red-500  " href="/">Sign in</a>
 
                     </div>
 
@@ -136,64 +163,97 @@
 
         </nav>
 
-        <section class="  relative z-10 text-white text-center space-y-6 px-8 pt-14">
-            <h1 class="text-3xl font-medium px-3">A modern publishing platform</h1>
-            <p class=" text-lg font-light">Grow your audience and build your online brand</p>
+        <section class="  relative z-10 text-white text-center space-y-6 px-8 pt-14 lg:pt-8">
+            <h1 class="text-3xl font-medium px-3 lg:text-5xl">A modern publishing platform</h1>
+            <p class=" text-lg font-light lg:font-normal">Grow your audience and build your online brand</p>
         </section>
 
         <!-- btns -->
-        <section class=" relative z-10  flex justify-evenly pt-14 px-5 ">
-            <a class="py-2 px-0 font-bold text-base w-36 text-center border-2 border-white rounded-full bg-white" style="color: hsl(356, 100%, 66%);" href=" ">Start for Free</a>
-            <a class="py-2 px-0 font-bold text-base w-36 text-center border-2 border-white rounded-full text-white" href=" ">Learn More</a>
+        <section class=" relative z-10  flex justify-evenly pt-14 px-5 lg:justify-center ">
+            <a class="py-2 px-0 font-bold text-base w-36 text-center border-2 border-white rounded-full  text-red-500 bg-white lg:mx-2" href=" ">Start for Free</a>
+            <a class="py-2 px-0 font-bold text-base w-36 text-center border-2 border-white rounded-full text-white lg:mx-2 " href=" ">Learn More</a>
 
         </section>
         <img class="relative  object-cover " style=" height: 60rem; margin-top: -50rem;" src="images/bg-pattern-intro.svg" alt="">
 
     </header>
 
-    <main class=" py-8 space-y-20" style="color:hsl(207, 13%, 34%);">
+    <main class=" py-8 space-y-20 overflow-x-hidden lg:py-0 lg:mt-0 lg:space-y-0" style="color:hsl(207, 13%, 34%);">
 
         <!-- top of main -->
-        <section class="  pt-28 flex flex-col justify-center text-center space-y-14">
-            <h1 class=" text-3xl font-bold block" style="color: hsl(237, 17%, 21%);">Designed for the future</h1>
+        <h1 class=" text-3xl font-bold block pt-28 text-center
+         lg:absolute lg:-bottom-28 lg:w-full  lg:text-4xl lg:font-mono lg:p-0 lg:m-0  " style="color: hsl(237, 17%, 21%);">
+            Designed for the future
+        </h1>
 
-            <img class='block' src="images/illustration-editor-mobile.svg" alt="">
+        <section class="  pt-2 flex flex-col justify-center text-center space-y-14
+         lg:flex-row lg:justify-start lg:items-center lg:p-0 lg:m-0 lg:pb-10 ">
 
 
-            <div class="space-y-10">
-                <h2 class=" text-3xl font-bold block px-4" style="color: hsl(237, 17%, 21%);">Introducing an extensible editor</h2>
-                <p class="text-xl  px-5" style="color:hsl(207, 13%, 34%);"> Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility
-                    with plugins and themes provide easy ways to add functionality or change the looks of a blog.</p>
+            <img class='block lg:hidden' src="images/illustration-editor-mobile.svg" alt="">
+
+
+            <article class="space-y-10 lg:ml-24 lg:pr-3  lg:text-left lg: ">
+
+                <h2 class=" text-3xl font-bold block px-4 lg:text-2xl" style="color: hsl(237, 17%, 21%);">
+                    Introducing an extensible editor
+                </h2>
+
+                <p class="text-base  px-5 lg:text-lg lg:pr-28 " style="color:hsl(207, 13%, 34%);">
+                    Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins
+                    and themes provide easy ways to add functionality or change the looks of a blog.
+                </p>
+
                 <!-- p 2 -->
-                <h2 class=" text-3xl font-bold block px-4 " style="color: hsl(237, 17%, 21%);">Robust content management</h2>
-                <p class="text-xl  px-5" style="color:hsl(207, 13%, 34%);">Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.</p>
-            </div>
+                <h2 class=" text-3xl font-bold block px-4 lg:text-2xl " style="color: hsl(237, 17%, 21%);">Robust content management</h2>
 
+                <p class="text-base  px-5 lg:text-lg lg:pr-28" style="color:hsl(207, 13%, 34%);">
+                    Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                </p>
+
+            </article>
+
+            <img class='hidden m-0 p-0 lg:block  lg:-mr-72  ' src="images/illustration-editor-desktop.svg" alt="">
 
         </section>
 
         <!--  mid of main -->
-        <section class="  ">
-            <img class="relative  z-10" src="images/illustration-phones.svg" alt="">
-            <div class="div1 -mt-48 text-center text-white overflow-hidden pb-10  " style="background:hsl(237, 17%, 21%);">
-                <img class=" -mt-48 object-cover " style="height: 35rem;" src="images/bg-pattern-circles.svg" alt="">
-                <h1 class="text-4xl font-semibold relative z-10 -mt-32 ">State of the Art Infrastructure</h1>
-                <p class="my-10 text-lg px-6 pb-10 relative z-10">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
+        <section class="  lg:pb-20 ">
+
+            <img class="relative  z-10  lg:absolute lg:-mt-28" src="images/illustration-phones.svg" alt="">
+
+            <div class="div1 -mt-48 text-center text-white overflow-hidden pb-10
+             lg:flex lg:justify-center lg:m-0 lg:p-0 lg:h-80  " style="background:hsl(237, 17%, 21%);">
+
+                <img class=" -mt-48 object-cover lg:-mt-40 lg:" style="height: 35rem;
+                 " src="images/bg-pattern-circles.svg" alt="">
+
+
+                <article class="lg:flex lg:flex-col justify-center lg:text-left lg:ml-20 lg:flex-wrap">
+
+                    <h1 class="text-4xl font-semibold relative z-10 -mt-32 lg:m-0 ">State of the Art Infrastructure</h1>
+                    <p class="my-10 text-lg px-6 pb-10 relative z-10 lg:px-0 lg:pr-60 lg:py-0 ">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                    </p>
+                </article>
+
             </div>
         </section>
 
         <!-- bottom of main -->
-        <section class="  text-center ">
-            <img class="" src="images/illustration-laptop-mobile.svg" alt="">
-            <div class="space-y-10">
-                <h2 class=" text-3xl font-bold block px-4 mt-20" style="color: hsl(237, 17%, 21%);"> Free, open, simple</h2>
-                <p class="text-xl  px-5" style="color:hsl(207, 13%, 34%);"> Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly
+        <section class="  text-center lg:flex items-center  ">
+
+            <img class=" block lg:hidden" src="images/illustration-laptop-mobile.svg" alt="">
+            <img class="hidden lg:block -ml-80" src="images/illustration-laptop-desktop.svg" alt="">
+
+            <article class="space-y-10 lg:text-left lg:ml-20">
+                <h2 class=" text-3xl font-bold block px-4 mt-20 lg:mt-0 lg:px-0" style="color: hsl(237, 17%, 21%);"> Free, open, simple</h2>
+                <p class="text-lg  px-5 lg:p-0 lg:pr-40" style="color:hsl(207, 13%, 34%);"> Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly
                     with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
                 <!-- p 2 -->
-                <h2 class=" text-3xl font-bold block px-4 " style="color: hsl(237, 17%, 21%);">Powerful tooling</h2>
-                <p class="text-xl  px-5" style="color:hsl(207, 13%, 34%);">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
+                <h2 class=" text-3xl font-bold block px-4 lg:px-0" style="color: hsl(237, 17%, 21%);">Powerful tooling</h2>
+                <p class="text-lg  px-5 lg:p-0 lg:pr-40" style="color:hsl(207, 13%, 34%);">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
                 </p>
-            </div>
+            </article>
         </section>
 
 
@@ -202,7 +262,7 @@
 
     </main>
 
-    <footer class="py-20 mt-24 flex flex-col justify-center text-center" style="background:hsl(240, 10%, 16%); color: hsl(240, 2%, 79%);">
+    <footer class="py-20 mt-24 flex flex-col justify-center text-center lg:mt-10    " style="background:hsl(240, 10%, 16%); color: hsl(240, 2%, 79%);">
         <a href="#" class="  flex justify-center text-center ">
             <img src="images/logo.svg" alt="" class="w-40">
         </a>
@@ -221,6 +281,7 @@
     let counter_1 = 0;
     let counter_2 = 0;
 
+    // ##############################
 
     three_lines.onclick = () => {
         if (counter_1 === 0) {
@@ -251,7 +312,7 @@
                 list.classList.remove("hidden")
                 list.classList.add("flex")
                 nImg.style.transform = " rotate(180deg)"
-                btn.style.color = " grey"
+                    // btn.style.color = " grey"
                 counter_2 = 1
                 console.log("count 2", counter_2)
                 return
@@ -261,7 +322,7 @@
             list.classList.remove("flex")
             list.classList.add("hidden")
             nImg.style.transform = " rotate(0deg)"
-            btn.style.color = " #000"
+                // btn.style.color = " #000"
             counter_2 = 0
             console.log("count 2", counter_2)
 
@@ -280,35 +341,6 @@
             nav_btn[i].style.color = " #000"
         }
     }
-
-    // setInterval(() => {
-
-
-    //     if (counter_2 === 0) {
-    //         nav_list.forEach(e => {
-    //             e.classList.remove("hidden")
-    //             e.classList.add("flex")
-    //         });
-
-    //         nImg.style.transform = " rotate(180deg)"
-    //         btn.style.color = " grey"
-    //         counter_2 = 1
-    //         console.log("count 2", counter_2)
-    //         return
-
-    //     } else {
-    //         nav_list.forEach(e => {
-    //             e.classList.remove("flex")
-    //             e.classList.add("")
-    //         });
-
-    //         nImg.style.transform = " rotate(0deg)"
-    //         btn.style.color = " #000"
-    //         counter_2 = 0
-    //         console.log("count 2", counter_2)
-    //     }
-
-    // }, 1000)
 </script>
 
 
